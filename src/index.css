@@ -1,0 +1,44 @@
+
+/* =========================================
+   TILLOU GROUP — PREMIUM CUSTOM SCROLLBAR
+========================================= */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAF5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #5B8C55 0%,
+    #174735 100%
+  );
+  border: 2px solid #FAFAF5;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E9B83F;
+}
+
+::-webkit-scrollbar-corner {
+  background: #FAFAF5;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5B8C55 #FAFAF5;
+}
+
+/* Smooth page scrolling */
+html {
+  scroll-behavior: smooth;
+}

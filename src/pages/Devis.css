@@ -1,0 +1,623 @@
+
+/* =========================================
+   TILLOU GROUP - QUOTE PAGE
+========================================= */
+
+.quote-page {
+  --quote-forest: #174735;
+  --quote-green: #5B8C55;
+  --quote-yellow: #E9B83F;
+  --quote-ivory: #FAFAF5;
+  --quote-anthracite: #27332F;
+  --quote-white: #FFFFFF;
+
+  width: 100%;
+  overflow: hidden;
+  background: var(--quote-ivory);
+  color: var(--quote-anthracite);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.quote-hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--quote-forest);
+}
+
+.quote-hero-image {
+  position: absolute;
+  inset: -4%;
+  z-index: -2;
+  background-image: url("https://images.hostinger.com/60c906ea-8668-4771-b1dc-7e6d689a5fad.png");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.04);
+  animation: quoteHeroZoom 16s ease-in-out infinite alternate;
+}
+
+.quote-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(10, 46, 26, 0.43) 0%,
+      rgba(10, 46, 26, 0.59) 48%,
+      rgba(10, 46, 26, 0.91) 100%
+    );
+}
+
+.quote-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1000px;
+  padding: 130px 24px 125px;
+  text-align: center;
+  color: var(--quote-white);
+}
+
+.quote-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--quote-yellow);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.quote-eyebrow::before,
+.quote-eyebrow::after {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: var(--quote-yellow);
+  opacity: 0.8;
+}
+
+.quote-hero-content h1 {
+  margin: 22px 0 0;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.quote-hero-content p {
+  max-width: 590px;
+  margin: 23px auto 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.quote-hero-line {
+  width: 48px;
+  height: 3px;
+  margin: 35px auto 0;
+  border-radius: 20px;
+  background: var(--quote-yellow);
+}
+
+.quote-hero-decoration {
+  position: absolute;
+  right: -120px;
+  bottom: -180px;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.quote-hero-decoration::before,
+.quote-hero-decoration::after {
+  position: absolute;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.quote-hero-decoration::before {
+  inset: 35px;
+}
+
+.quote-hero-decoration::after {
+  inset: 75px;
+}
+
+@keyframes quoteHeroZoom {
+  from {
+    transform: scale(1.04);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* =========================================
+   FORM SECTION
+========================================= */
+
+.quote-section {
+  position: relative;
+  padding: 105px 24px 120px;
+  background:
+    radial-gradient(
+      circle at 5% 15%,
+      rgba(91, 140, 85, 0.08),
+      transparent 28%
+    ),
+    var(--quote-ivory);
+}
+
+.quote-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quote-intro {
+  max-width: 650px;
+  margin: 0 auto 43px;
+  text-align: center;
+}
+
+.quote-section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--quote-green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.quote-intro h2 {
+  margin: 17px 0 0;
+  color: var(--quote-forest);
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.quote-intro h2 span {
+  color: var(--quote-green);
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.quote-form-card {
+  position: relative;
+  padding: 42px 46px;
+  overflow: hidden;
+  border: 1px solid rgba(39, 51, 47, 0.07);
+  border-radius: 18px;
+  background: var(--quote-white);
+  box-shadow:
+    0 25px 70px rgba(23, 71, 53, 0.07),
+    0 3px 12px rgba(23, 71, 53, 0.025);
+}
+
+.quote-form-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--quote-forest),
+    var(--quote-green),
+    var(--quote-yellow)
+  );
+  content: "";
+}
+
+.quote-form-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(39, 51, 47, 0.09);
+}
+
+.quote-form-header-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: rgba(91, 140, 85, 0.1);
+  color: var(--quote-forest);
+}
+
+.quote-form-header h3 {
+  margin: 0;
+  color: var(--quote-forest);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.quote-form-header p {
+  margin: 5px 0 0;
+  color: #87918B;
+  font-size: 12px;
+}
+
+/* =========================================
+   FORM GROUPS
+========================================= */
+
+.quote-form {
+  padding-top: 30px;
+}
+
+.quote-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.quote-group-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quote-group-icon {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #F0F5EF;
+  color: var(--quote-green);
+}
+
+.quote-group-heading h4 {
+  margin: 0;
+  color: var(--quote-forest);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.quote-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px 20px;
+}
+
+.quote-fields-one {
+  grid-template-columns: 1fr;
+}
+
+.quote-fields-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quote-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.quote-label {
+  color: var(--quote-anthracite);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.005em;
+}
+
+.quote-required {
+  margin-left: 4px;
+  color: #C78F17;
+  font-weight: 800;
+}
+
+.quote-input {
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid #E3E9E3;
+  border-radius: 8px;
+  outline: none;
+  background: #FCFDFB;
+  color: var(--quote-anthracite);
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.quote-input::placeholder {
+  color: #A7B0AA;
+  opacity: 1;
+}
+
+.quote-input:hover {
+  border-color: #B9CBB9;
+  background: #FFFFFF;
+}
+
+.quote-input:focus {
+  border-color: var(--quote-green);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(91, 140, 85, 0.1);
+}
+
+select.quote-input {
+  cursor: pointer;
+}
+
+textarea.quote-input {
+  min-height: 130px;
+  height: auto;
+  padding: 14px 15px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.quote-form-divider {
+  width: 100%;
+  height: 1px;
+  margin: 33px 0;
+  background: #EAEFEA;
+}
+
+/* =========================================
+   CONSENT
+========================================= */
+
+.quote-consent {
+  margin-top: 33px;
+  padding: 19px;
+  border: 1px solid #E9EEE8;
+  border-radius: 10px;
+  background: #FAFCF9;
+}
+
+.quote-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  cursor: pointer;
+}
+
+.quote-checkbox-label input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.quote-custom-checkbox {
+  display: flex;
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #C9D4C9;
+  border-radius: 5px;
+  background: white;
+  color: transparent;
+  transition: all 0.2s ease;
+}
+
+.quote-checkbox-label input:checked + .quote-custom-checkbox {
+  border-color: var(--quote-forest);
+  background: var(--quote-forest);
+  color: white;
+}
+
+.quote-checkbox-label input:focus-visible + .quote-custom-checkbox {
+  outline: 3px solid rgba(91, 140, 85, 0.25);
+  outline-offset: 2px;
+}
+
+.quote-consent-text {
+  color: #6F7A73;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.quote-consent-text a {
+  color: var(--quote-green);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.quote-consent-text a:hover {
+  color: var(--quote-forest);
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.quote-submit-area {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 28px;
+}
+
+.quote-submit-button {
+  position: relative;
+  display: inline-flex;
+  min-width: 205px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 24px;
+  overflow: hidden;
+  border: 1px solid var(--quote-yellow);
+  border-radius: 7px;
+  background: var(--quote-yellow);
+  color: var(--quote-forest);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.quote-submit-button svg {
+  transition: transform 0.25s ease;
+}
+
+.quote-submit-button:hover {
+  transform: translateY(-3px);
+  background: #F0C653;
+  box-shadow: 0 10px 25px rgba(233, 184, 63, 0.25);
+}
+
+.quote-submit-button:hover svg {
+  transform: translate(3px, -2px);
+}
+
+.quote-submit-button:focus-visible {
+  outline: 3px solid rgba(91, 140, 85, 0.4);
+  outline-offset: 4px;
+}
+
+.quote-submit-button:active {
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .quote-fields-three {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quote-fields-three .quote-field:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .quote-form-card {
+    padding: 35px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .quote-hero {
+    min-height: 440px;
+  }
+
+  .quote-hero-content {
+    padding: 110px 22px;
+  }
+
+  .quote-hero-content h1 {
+    font-size: 43px;
+  }
+
+  .quote-hero-content p {
+    font-size: 14px;
+  }
+
+  .quote-section {
+    padding: 75px 16px 85px;
+  }
+
+  .quote-intro {
+    margin-bottom: 30px;
+  }
+
+  .quote-intro h2 {
+    font-size: 32px;
+  }
+
+  .quote-form-card {
+    padding: 27px 20px;
+    border-radius: 13px;
+  }
+
+  .quote-form-header {
+    padding-bottom: 24px;
+  }
+
+  .quote-form-header h3 {
+    font-size: 17px;
+  }
+
+  .quote-form {
+    padding-top: 25px;
+  }
+
+  .quote-fields-grid,
+  .quote-fields-three {
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
+
+  .quote-fields-three .quote-field:last-child {
+    grid-column: auto;
+  }
+
+  .quote-form-divider {
+    margin: 27px 0;
+  }
+
+  .quote-submit-area {
+    justify-content: stretch;
+  }
+
+  .quote-submit-button {
+    width: 100%;
+  }
+
+  .quote-consent {
+    padding: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-hero-image {
+    animation: none;
+  }
+
+  .quote-page *,
+  .quote-page *::before,
+  .quote-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
